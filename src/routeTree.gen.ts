@@ -10,33 +10,73 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ContactoRouteImport } from './routes/contacto'
+import { Route as NosotrosRouteImport } from './routes/nosotros'
+import { Route as ToursIndexRouteImport } from './routes/tours.index'
+import { Route as ToursSlugRouteImport } from './routes/tours.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContactoRoute = ContactoRouteImport.update({
+  id: '/contacto',
+  path: '/contacto',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NosotrosRoute = NosotrosRouteImport.update({
+  id: '/nosotros',
+  path: '/nosotros',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToursIndexRoute = ToursIndexRouteImport.update({
+  id: '/tours/',
+  path: '/tours/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToursSlugRoute = ToursSlugRouteImport.update({
+  id: '/tours/$slug',
+  path: '/tours/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contacto': typeof ContactoRoute
+  '/nosotros': typeof NosotrosRoute
+  '/tours/$slug': typeof ToursSlugRoute
+  '/tours/': typeof ToursIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contacto': typeof ContactoRoute
+  '/nosotros': typeof NosotrosRoute
+  '/tours/$slug': typeof ToursSlugRoute
+  '/tours': typeof ToursIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contacto': typeof ContactoRoute
+  '/nosotros': typeof NosotrosRoute
+  '/tours/$slug': typeof ToursSlugRoute
+  '/tours/': typeof ToursIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/contacto' | '/nosotros' | '/tours/$slug' | '/tours/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/contacto' | '/nosotros' | '/tours/$slug' | '/tours'
+  id: '__root__' | '/' | '/contacto' | '/nosotros' | '/tours/$slug' | '/tours/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContactoRoute: typeof ContactoRoute
+  NosotrosRoute: typeof NosotrosRoute
+  ToursSlugRoute: typeof ToursSlugRoute
+  ToursIndexRoute: typeof ToursIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,22 +88,44 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contacto': {
+      id: '/contacto'
+      path: '/contacto'
+      fullPath: '/contacto'
+      preLoaderRoute: typeof ContactoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nosotros': {
+      id: '/nosotros'
+      path: '/nosotros'
+      fullPath: '/nosotros'
+      preLoaderRoute: typeof NosotrosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tours/': {
+      id: '/tours/'
+      path: '/tours'
+      fullPath: '/tours/'
+      preLoaderRoute: typeof ToursIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tours/$slug': {
+      id: '/tours/$slug'
+      path: '/tours/$slug'
+      fullPath: '/tours/$slug'
+      preLoaderRoute: typeof ToursSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContactoRoute: ContactoRoute,
+  NosotrosRoute: NosotrosRoute,
+  ToursSlugRoute: ToursSlugRoute,
+  ToursIndexRoute: ToursIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}

@@ -10,12 +10,13 @@ import {
   Info,
   ArrowRight,
 } from "lucide-react";
-import { getTour, formatCOP, tours, WHATSAPP } from "@/data/tours";
+import { getTour, formatCOP, tours, WHATSAPP, type Tour } from "@/data/tours";
+import { TourCard } from "@/components/site/TourCard";
 import { Reveal } from "@/components/site/Reveal";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 export const Route = createFileRoute("/tours/$slug")({
-  loader: ({ params }) => {
+  loader: ({ params }): { tour: Tour } => {
     const tour = getTour(params.slug);
     if (!tour) throw notFound();
     return { tour };
@@ -293,7 +294,7 @@ function TourPage() {
           <ul className="mt-8 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
             {relacionados.map((t) => (
               <li key={t.slug}>
-                <TourCardLazy slug={t.slug} />
+                <TourCard tour={t} />
               </li>
             ))}
           </ul>
@@ -312,10 +313,3 @@ function TourPage() {
   );
 }
 
-function TourCardLazy({ slug }: { slug: string }) {
-  const t = getTour(slug);
-  if (!t) return null;
-  return <TourCardImport tour={t} />;
-}
-
-import { TourCard as TourCardImport } from "@/components/site/TourCard";

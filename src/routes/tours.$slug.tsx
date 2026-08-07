@@ -74,7 +74,7 @@ export const Route = createFileRoute("/tours/$slug")({
 });
 
 function TourPage() {
-  const { tour } = Route.useLoaderData();
+  const { tour } = Route.useLoaderData() as { tour: Tour };
   const relacionados = tours.filter((t) => t.slug !== tour.slug).slice(0, 3);
 
   return (

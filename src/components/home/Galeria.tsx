@@ -1,15 +1,15 @@
 import { Reveal } from "@/components/site/Reveal";
-import { tours } from "@/data/tours";
+import { pic } from "@/data/tours";
 
 const items = [
-  { src: tours[2].imagen, alt: "Playa de aguas turquesa en San Andrés", span: "row-span-2" },
-  { src: tours[6].imagen, alt: "Palmas de cera del Valle del Cocora", span: "" },
-  { src: tours[3].imagen, alt: "Balcones coloniales de Cartagena", span: "" },
-  { src: tours[7].imagen, alt: "Playa y rocas del Parque Tairona", span: "row-span-2" },
-  { src: tours[9].imagen, alt: "Ballena jorobada saltando en el Pacífico", span: "" },
-  { src: tours[8].imagen, alt: "Atardecer en la bahía de Santa Marta", span: "" },
-  { src: tours[1].imagen, alt: "Peñón de Guatapé y su embalse", span: "" },
-  { src: tours[4].imagen, alt: "Pirámide maya frente al mar turquesa", span: "row-span-2" },
+  { src: pic("san-andres-islas"), alt: "Playa de aguas turquesa en San Andrés", span: "row-span-2" },
+  { src: pic("eje-cafetero"), alt: "Palmas de cera del Valle del Cocora", span: "" },
+  { src: pic("caribe-colombiano"), alt: "Balcones coloniales de Cartagena", span: "" },
+  { src: pic("parque-tairona"), alt: "Playa y rocas del Parque Tairona", span: "row-span-2" },
+  { src: pic("valle-y-pacifico-colombiano"), alt: "Ballena jorobada saltando en el Pacífico", span: "" },
+  { src: pic("santa-marta"), alt: "Atardecer en la bahía de Santa Marta", span: "" },
+  { src: pic("antioquia"), alt: "Peñón de Guatapé y su embalse", span: "" },
+  { src: pic("ciudad-de-mexico-y-cancun"), alt: "Pirámide maya frente al mar turquesa", span: "row-span-2" },
 ];
 
 export function Galeria() {

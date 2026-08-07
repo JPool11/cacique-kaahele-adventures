@@ -19,7 +19,7 @@ export function Testimonios() {
     return () => clearInterval(id);
   }, []);
 
-  const t = testimonios[i];
+  const t = testimonios[i]!;
 
   return (
     <section className="section-y bg-secondary/50">

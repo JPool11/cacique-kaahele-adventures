@@ -8,7 +8,6 @@ export function Hero() {
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "22%"]);
-  const fade = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   return (
     <section ref={ref} className="relative isolate flex min-h-dvh items-end overflow-hidden">
@@ -31,7 +30,7 @@ export function Hero() {
       </div>
 
       <div className="relative mx-auto w-full max-w-7xl px-4 pt-32 pb-28 sm:px-6 sm:pb-36">
-        <motion.div style={{ opacity: fade }}>
+        <div>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -82,7 +81,7 @@ export function Hero() {
               <CalendarDays className="size-5" aria-hidden="true" /> Ver próximos viajes
             </a>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
 
       <svg

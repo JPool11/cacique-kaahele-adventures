@@ -71,7 +71,7 @@ function Contacto() {
                 </div>
                 <div>
                   <label htmlFor="tel" className="mb-2 block text-sm font-bold">Teléfono / WhatsApp</label>
-                  <input id="tel" name="tel" type="tel" required className={field} placeholder="+57 300 000 0000" />
+                  <input id="tel" name="tel" type="tel" required className={field} placeholder="+57 320 377 8945" />
                 </div>
                 <div className="sm:col-span-2">
                   <label htmlFor="email" className="mb-2 block text-sm font-bold">Correo electrónico</label>
@@ -118,14 +118,14 @@ function Contacto() {
               <ul className="mt-5 space-y-4 text-on-ink/80">
                 <li className="flex items-start gap-3">
                   <Phone className="mt-0.5 size-5 shrink-0 text-sun" aria-hidden="true" />
-                  <a href="tel:+573000000000" className="focus-ring hover:text-sun">+57 300 000 0000</a>
+                  <a href="tel:+573203778945" className="focus-ring hover:text-sun">+57 320 377 8945</a>
                 </li>
                 <li className="flex items-start gap-3">
                   <Mail className="mt-0.5 size-5 shrink-0 text-sun" aria-hidden="true" />
                   <a href="mailto:hola@caciquekaahele.com" className="focus-ring hover:text-sun">hola@caciquekaahele.com</a>
                 </li>
                 <li className="flex items-start gap-3">
-                  <MapPin className="mt-0.5 size-5 shrink-0 text-sun" aria-hidden="true" /> Cra. 45 #52-30, Medellín, Colombia
+                  <MapPin className="mt-0.5 size-5 shrink-0 text-sun" aria-hidden="true" /> Cra. 10 #7-33, Pital, Huila, Colombia
                 </li>
               </ul>
               <a
@@ -159,7 +159,7 @@ function Contacto() {
             <div className="overflow-hidden rounded-[2rem] border border-border">
               <iframe
                 title="Mapa de la oficina de Cacique Kaahele en Medellín"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=-75.60%2C6.22%2C-75.54%2C6.27&layer=mapnik"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-75.818%2C2.257%2C-75.792%2C2.275&layer=mapnik&marker=2.2661%2C-75.8047"
                 className="h-80 w-full"
                 loading="lazy"
               />

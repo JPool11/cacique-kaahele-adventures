@@ -379,6 +379,6 @@ export const formatCOP = (v: number) =>
   new Intl.NumberFormat("es-CO", { style: "currency", currency: "COP", maximumFractionDigits: 0 }).format(v);
 
 export const WHATSAPP =
-  "https://wa.me/573000000000?text=Hola%20Cacique%20Kaahele,%20quiero%20informaci%C3%B3n%20de%20un%20viaje";
+  "https://wa.me/573203778945?text=Hola%20Cacique%20Kaahele,%20quiero%20informaci%C3%B3n%20de%20un%20viaje";
 
 export const pic = (slug: string): string => tours.find((t) => t.slug === slug)?.imagen ?? "";

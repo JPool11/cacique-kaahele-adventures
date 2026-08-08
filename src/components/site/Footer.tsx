@@ -64,15 +64,15 @@ export function Footer() {
           <h3 className="text-sm font-bold tracking-widest uppercase text-sun">Contacto</h3>
           <ul className="mt-4 space-y-3 text-sm text-on-ink/75">
             <li className="flex items-start gap-2">
-              <MapPin className="mt-0.5 size-4 shrink-0 text-sun" aria-hidden="true" /> Cra. 45 #52-30, Medellín, Colombia
+              <MapPin className="mt-0.5 size-4 shrink-0 text-sun" aria-hidden="true" /> Cra. 10 #7-33, Pital, Huila, Colombia
             </li>
             <li className="flex items-start gap-2">
               <Phone className="mt-0.5 size-4 shrink-0 text-sun" aria-hidden="true" />
-              <a href="tel:+573000000000" className="focus-ring hover:text-sun">+57 300 000 0000</a>
+              <a href="tel:+573204180019" className="focus-ring hover:text-sun">+57 320 418 0019</a>
             </li>
             <li className="flex items-start gap-2">
               <Mail className="mt-0.5 size-4 shrink-0 text-sun" aria-hidden="true" />
-              <a href="mailto:hola@caciquekaahele.com" className="focus-ring hover:text-sun">hola@caciquekaahele.com</a>
+              <a href="mailto:informacion@caciquekaahele.com" className="focus-ring hover:text-sun">informacion@caciquekaahele.com</a>
             </li>
           </ul>
           <a
@@ -85,8 +85,8 @@ export function Footer() {
           </a>
           <div className="mt-5 overflow-hidden rounded-2xl border border-white/10">
             <iframe
-              title="Ubicación de Cacique Kaahele en el mapa"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=-75.60%2C6.22%2C-75.54%2C6.27&layer=mapnik"
+              title="Ubicación de Cacique Kaahele en Pital, Huila"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-75.8146%2C2.2561%2C-75.7946%2C2.2761&layer=mapnik&marker=2.2661%2C-75.8046"
               className="h-36 w-full"
               loading="lazy"
             />

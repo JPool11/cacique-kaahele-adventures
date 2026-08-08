@@ -72,7 +72,7 @@ export function Footer() {
             </li>
             <li className="flex items-start gap-2">
               <Mail className="mt-0.5 size-4 shrink-0 text-sun" aria-hidden="true" />
-              <a href="mailto:hola@caciquekaahele.com" className="focus-ring hover:text-sun">hola@caciquekaahele.com</a>
+              <a href="mailto:informacion@caciquekaahele.com" className="focus-ring hover:text-sun">informacion@caciquekaahele.com</a>
             </li>
           </ul>
           <a

@@ -118,7 +118,10 @@ function Contacto() {
               <ul className="mt-5 space-y-4 text-on-ink/80">
                 <li className="flex items-start gap-3">
                   <Phone className="mt-0.5 size-5 shrink-0 text-sun" aria-hidden="true" />
-                  <a href="tel:+573204180019" className="focus-ring hover:text-sun">+57 320 418 0019</a>
+                  <span>
+                    <a href="tel:+573204180019" className="focus-ring hover:text-sun">+57 320 418 0019</a>
+                    <span className="block text-sm text-on-ink/60">WhatsApp: +57 320 377 8945</span>
+                  </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Mail className="mt-0.5 size-5 shrink-0 text-sun" aria-hidden="true" />

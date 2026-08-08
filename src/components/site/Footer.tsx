@@ -96,12 +96,34 @@ export function Footer() {
 
       <div className="relative border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-6 text-xs text-on-ink/55 sm:flex-row sm:items-center sm:justify-between sm:px-6">
-          <p>© {new Date().getFullYear()} Cacique Kaahele. Todos los derechos reservados. RNT 000000</p>
+          <p>© {new Date().getFullYear()} Cacique Kaahele. Todos los derechos reservados. RNT 212273 · NIT 83227323-1</p>
           <div className="flex flex-wrap gap-4">
             <Link to="/contacto" className="focus-ring hover:text-sun">Política de privacidad</Link>
             <Link to="/contacto" className="focus-ring hover:text-sun">Términos y condiciones</Link>
             <Link to="/contacto" className="focus-ring hover:text-sun">Política de cookies</Link>
           </div>
+        </div>
+        <div className="mx-auto max-w-7xl px-4 pb-6 text-xs text-on-ink/45 sm:px-6">
+          <p>
+            Powered by:{" "}
+            <a
+              href="https://www.jpooltech.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="focus-ring font-semibold transition-colors hover:text-sun"
+            >
+              JPool Tech.
+            </a>{" "}
+            |{" "}
+            <a
+              href="https://www.linkedin.com/in/jhan-pool-agudelo-triana-29500a225/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="focus-ring font-semibold transition-colors hover:text-sun"
+            >
+              Jhan Pool Agudelo Triana
+            </a>
+          </p>
         </div>
       </div>
     </footer>

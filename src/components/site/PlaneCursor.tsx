@@ -16,6 +16,8 @@ export function PlaneCursor() {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (!fine || reduced) return;
     setEnabled(true);
+    document.body.classList.add("plane-cursor");
+
 
     const onMove = (e: PointerEvent) => {
       setPos({ x: e.clientX, y: e.clientY });

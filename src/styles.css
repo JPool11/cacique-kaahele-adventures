@@ -280,3 +280,44 @@
     transition-duration: 0.001ms !important;
   }
 }
+
+@media (pointer: fine) and (min-width: 768px) {
+  body.plane-cursor,
+  body.plane-cursor * {
+    cursor: none !important;
+  }
+}
+
+@keyframes plane-takeoff {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  35% {
+    transform: translate(-6px, 4px) scale(0.9);
+  }
+  100% {
+    transform: translate(26px, -22px) scale(1.15);
+  }
+}
+
+@keyframes plane-trail-fade {
+  0% {
+    opacity: 0.75;
+    width: 0;
+  }
+  100% {
+    opacity: 0;
+    width: 90px;
+  }
+}
+
+.plane-takeoff {
+  animation: plane-takeoff 0.48s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+.plane-trail {
+  height: 4px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, transparent, var(--ocean));
+  animation: plane-trail-fade 0.7s ease-out forwards;
+}

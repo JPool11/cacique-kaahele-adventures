@@ -41,6 +41,7 @@ export function PlaneCursor() {
     window.addEventListener("pointermove", onMove, { passive: true });
     window.addEventListener("pointerdown", onDown, { passive: true });
     return () => {
+      document.body.classList.remove("plane-cursor");
       window.removeEventListener("pointermove", onMove);
       window.removeEventListener("pointerdown", onDown);
     };

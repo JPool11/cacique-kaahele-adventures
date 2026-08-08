@@ -38,7 +38,7 @@ export const Route = createFileRoute("/")({
           description,
           url: "/",
           telephone: "+57 320 377 8945",
-          email: "hola@caciquekaahele.com",
+          email: "informacion@caciquekaahele.com",
           address: { "@type": "PostalAddress", addressLocality: "Pital", addressRegion: "Huila", streetAddress: "Cra. 10 #7-33", addressCountry: "CO" },
           aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "512" },
         }),

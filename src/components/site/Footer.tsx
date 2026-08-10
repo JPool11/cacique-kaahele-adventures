@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Facebook, Youtube, Mail, Phone, MapPin } from "lucide-react";
-import logo from "@/assets/logo.png.asset.json";
+import logo from "@/assets/logo.png";
 import { WHATSAPP, tours } from "@/data/tours";
 
 export function Footer() {
@@ -12,7 +12,7 @@ export function Footer() {
       />
       <div className="relative mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
         <div>
-          <img src={logo.url} alt="Cacique Kaahele" width={200} height={110} loading="lazy" className="h-16 w-auto" />
+          <img src={logo} alt="Cacique Kaahele" width={200} height={110} loading="lazy" className="h-16 w-auto" />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-on-ink/70">
             Agencia de turismo especializada en experiencias de viaje inolvidables por Colombia y el mundo. Más de 10 años
             creando recuerdos.

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X, MessageCircle } from "lucide-react";
-import logo from "@/assets/logo.png.asset.json";
+import logo from "@/assets/logo.png";
 import { WHATSAPP } from "@/data/tours";
 import { cn } from "@/lib/utils";
 
@@ -33,7 +33,7 @@ export function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
         <Link to="/" className="focus-ring flex shrink-0 items-center rounded-xl" aria-label="Cacique Kaahele — inicio">
           <img
-            src={logo.url}
+            src={logo}
             alt="Cacique Kaahele agencia de turismo"
             width={160}
             height={88}

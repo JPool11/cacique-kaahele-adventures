@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cacique Kaahele | Sitio en construcción</title>
+    <meta
+      name="description"
+      content="Estamos preparando el nuevo sitio de Cacique Kaahele. Pronto podrás explorar destinos y salidas 2026."
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="theme-color" content="#0d4657" />
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Manrope:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ocean: #2eb8d9;
+        --ocean-deep: #0d4657;
+        --sun: #f0c43a;
+        --coral: #e8733a;
+        --jungle: #2f9e5a;
+        --ink: #14252c;
+        --on-ocean: #f7fbff;
+        --on-sun: #1a1408;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+      }
+
+      body {
+        font-family: Manrope, system-ui, sans-serif;
+        color: var(--on-ocean);
+        background: var(--ocean-deep);
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+      }
+
+      .bg {
+        position: fixed;
+        inset: 0;
+        z-index: -2;
+        background:
+          radial-gradient(ellipse 90% 70% at 20% 10%, rgba(46, 184, 217, 0.35), transparent 55%),
+          radial-gradient(ellipse 80% 60% at 85% 20%, rgba(240, 196, 58, 0.28), transparent 50%),
+          radial-gradient(ellipse 70% 50% at 50% 100%, rgba(232, 115, 58, 0.22), transparent 45%),
+          var(--ocean-deep);
+      }
+
+      .noise {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        opacity: 0.07;
+        pointer-events: none;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      }
+
+      main {
+        width: min(42rem, 100%);
+        margin: 0 auto;
+        padding: 4rem 1rem;
+        text-align: center;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .logo {
+        height: 4.5rem;
+        width: auto;
+        filter: drop-shadow(0 4px 24px rgba(0, 0, 0, 0.35));
+        animation: rise 0.7s ease both;
+      }
+
+      h1 {
+        margin: 2.5rem 0 0;
+        font-family: Poppins, system-ui, sans-serif;
+        font-weight: 800;
+        font-size: clamp(2.25rem, 7vw, 3.75rem);
+        line-height: 1.05;
+        letter-spacing: -0.02em;
+        animation: rise 0.8s 0.12s ease both;
+      }
+
+      h1 span {
+        background: linear-gradient(120deg, var(--sun), var(--coral) 70%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      p.lead {
+        margin: 1.25rem 0 0;
+        font-size: clamp(1rem, 2.5vw, 1.125rem);
+        line-height: 1.65;
+        color: rgba(247, 251, 255, 0.8);
+        animation: rise 0.75s 0.28s ease both;
+      }
+
+      .actions {
+        margin-top: 2.25rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        animation: rise 0.75s 0.42s ease both;
+      }
+
+      .socials {
+        margin-top: 2.5rem;
+        display: flex;
+        gap: 0.75rem;
+        animation: rise 0.75s 0.52s ease both;
+      }
+
+      .socials a {
+        display: grid;
+        place-items: center;
+        width: 2.75rem;
+        height: 2.75rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.1);
+        color: var(--on-ocean);
+        transition: background 0.2s ease;
+      }
+
+      .socials a:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      .socials svg {
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+
+      .map-block {
+        margin-top: 3rem;
+        width: 100%;
+        text-align: left;
+        animation: rise 0.8s 0.62s ease both;
+      }
+
+      .address {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        margin: 0 0 0.75rem;
+        font-size: 0.875rem;
+        color: rgba(247, 251, 255, 0.75);
+      }
+
+      .address svg {
+        width: 1rem;
+        height: 1rem;
+        color: var(--sun);
+        flex-shrink: 0;
+      }
+
+      .map-link {
+        display: block;
+        overflow: hidden;
+        border-radius: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+      }
+
+      .map-link iframe {
+        display: block;
+        width: 100%;
+        height: 12rem;
+        border: 0;
+        pointer-events: none;
+      }
+
+      @media (min-width: 640px) {
+        .logo {
+          height: 5rem;
+        }
+
+        .actions {
+          flex-direction: row;
+          justify-content: center;
+        }
+
+        .map-link iframe {
+          height: 14rem;
+        }
+      }
+
+      a.btn {
+        display: inline-flex;
+        min-height: 3rem;
+        align-items: center;
+        justify-content: center;
+        padding: 0 1.75rem;
+        border-radius: 999px;
+        font-size: 0.875rem;
+        font-weight: 700;
+        text-decoration: none;
+        transition: transform 0.2s ease, background 0.2s ease;
+      }
+
+      a.btn:hover {
+        transform: scale(1.03);
+      }
+
+      a.btn:focus-visible,
+      .socials a:focus-visible,
+      .map-link:focus-visible,
+      footer a:focus-visible {
+        outline: 2px solid var(--sun);
+        outline-offset: 3px;
+      }
+
+      a.whatsapp {
+        color: var(--on-ocean);
+        background: var(--jungle);
+        box-shadow: 0 12px 28px rgba(20, 37, 44, 0.28);
+        gap: 0.5rem;
+      }
+
+      a.whatsapp svg {
+        width: 1.25rem;
+        height: 1.25rem;
+        fill: currentColor;
+        flex-shrink: 0;
+      }
+
+      a.mail {
+        color: var(--on-sun);
+        background: linear-gradient(120deg, var(--sun), var(--coral) 70%);
+        box-shadow: 0 10px 30px rgba(232, 115, 58, 0.35);
+        gap: 0.5rem;
+      }
+
+      a.mail svg {
+        width: 1rem;
+        height: 1rem;
+        flex-shrink: 0;
+      }
+
+      footer {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(20, 37, 44, 0.4);
+        backdrop-filter: blur(8px);
+        padding: 1.5rem 1rem;
+      }
+
+      .footer-inner {
+        max-width: 80rem;
+        margin: 0 auto;
+        font-size: 0.75rem;
+        color: rgba(247, 251, 255, 0.6);
+      }
+
+      .footer-inner .powered {
+        margin-top: 0.5rem;
+        color: rgba(247, 251, 255, 0.45);
+      }
+
+      .footer-inner a {
+        color: inherit;
+        font-weight: 600;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      .footer-inner a:hover {
+        color: var(--sun);
+      }
+
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(18px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes plane-trail-fade {
+        0% {
+          opacity: 0.7;
+          transform: translate(-50%, -50%) scale(0.2);
+        }
+        100% {
+          opacity: 0;
+          transform: translate(-50%, -50%) scale(1.4);
+        }
+      }
+
+      body.plane-cursor,
+      body.plane-cursor * {
+        cursor: none !important;
+      }
+
+      .plane-layer {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        pointer-events: none;
+        display: none;
+      }
+
+      @media (min-width: 768px) {
+        .plane-layer {
+          display: block;
+        }
+      }
+
+      .plane {
+        position: absolute;
+        top: 0;
+        left: 0;
+        will-change: transform;
+      }
+
+      .plane svg {
+        width: 1.75rem;
+        height: 1.75rem;
+        filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.45));
+      }
+
+      .plane-trail {
+        position: absolute;
+        width: 44px;
+        height: 44px;
+        border-radius: 9999px;
+        border: 2px solid var(--ocean);
+        animation: plane-trail-fade 0.7s ease-out forwards;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg" aria-hidden="true"></div>
+    <div class="noise" aria-hidden="true"></div>
+
+    <main>
+      <img class="logo" src="./logo.png" width="200" height="110" alt="Cacique Kaahele" />
+      <h1>Sitio en <span>construcción</span></h1>
+      <p class="lead">
+        Estamos preparando algo especial para tus próximas aventuras. Pronto podrás explorar
+        destinos, salidas y reservar con nosotros aquí.
+      </p>
+      <div class="actions">
+        <a
+          class="btn whatsapp"
+          href="https://wa.me/573203778945?text=Hola%20Cacique%20Kaahele,%20quiero%20informaci%C3%B3n%20de%20un%20viaje"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15s-.77.96-.94 1.16c-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.01-1.04 2.47 1.06 2.86 1.21 3.06c.15.2 2.09 3.2 5.07 4.49.71.31 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 2C6.5 2 2 6.5 2 12.05c0 1.77.46 3.5 1.34 5.02L2 22l5.05-1.32a10 10 0 0 0 5 1.28h.01c5.54 0 10.04-4.5 10.04-10.05C22.1 6.5 17.6 2 12.05 2zm0 18.13h-.01a8.3 8.3 0 0 1-4.24-1.16l-.3-.18-3 .78.8-2.92-.2-.3a8.28 8.28 0 0 1-1.27-4.4c0-4.6 3.74-8.34 8.35-8.34 2.23 0 4.32.87 5.9 2.45a8.28 8.28 0 0 1 2.44 5.9c0 4.6-3.74 8.34-8.34 8.34z"
+            />
+          </svg>
+          Escríbenos por WhatsApp
+        </a>
+        <a class="btn mail" href="mailto:informacion@caciquekaahele.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect width="20" height="16" x="2" y="4" rx="2" />
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+          </svg>
+          informacion@caciquekaahele.com
+        </a>
+      </div>
+
+      <div class="socials" aria-label="Redes sociales">
+        <a
+          href="https://www.instagram.com/cacique_kaahele/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+          </svg>
+        </a>
+        <a
+          href="https://www.facebook.com/p/Agencia-de-Turismo-Cacique-Kaahele-61557319840422/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+          </svg>
+        </a>
+        <a href="https://www.tiktok.com/@cacique_kaahele" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.8a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.73a8.19 8.19 0 0 0 4.76 1.52V6.8a4.85 4.85 0 0 1-1-.11Z"
+            />
+          </svg>
+        </a>
+      </div>
+
+      <div class="map-block">
+        <p class="address">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          Cra. 10 #7-33, Pital, Huila, Colombia
+        </p>
+        <a
+          class="map-link"
+          href="https://www.google.com/maps/place/Agencia+de+Turismo+Cacique+Kaahele/data=!4m2!3m1!1s0x0:0x8d36f54e3ffa3beb"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Abrir ubicación de Cacique Kaahele en Google Maps"
+        >
+          <iframe
+            title="Ubicación de Cacique Kaahele en Pital, Huila"
+            src="https://www.google.com/maps?q=Agencia+de+Turismo+Cacique+Kaahele&hl=es&z=16&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </a>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <p>© 2026 Cacique Kaahele. Todos los derechos reservados. RNT 212273 · NIT 83227323-1</p>
+        <p class="powered">
+          Powered by:
+          <a href="https://www.jpooltech.com/" target="_blank" rel="noopener noreferrer">JPool Tech.</a>
+          |
+          <a
+            href="https://www.linkedin.com/in/jhan-pool-agudelo-triana-29500a225/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Jhan Pool Agudelo Triana</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <div class="plane-layer" id="plane-layer" aria-hidden="true">
+      <div class="plane" id="plane">
+        <svg viewBox="0 0 24 24">
+          <defs>
+            <linearGradient id="plane-cursor-fill" x1="4" y1="2" x2="20" y2="22" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#e8733a" />
+              <stop offset="48%" stop-color="#e8733a" />
+              <stop offset="52%" stop-color="#f0c43a" />
+              <stop offset="100%" stop-color="#f0c43a" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"
+            fill="url(#plane-cursor-fill)"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        var fine = window.matchMedia("(pointer: fine)").matches;
+        var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (!fine || reduced) return;
+
+        var NOSE_OFFSET = 37;
+        var plane = document.getElementById("plane");
+        var layer = document.getElementById("plane-layer");
+        if (!plane || !layer) return;
+
+        document.body.classList.add("plane-cursor");
+
+        var target = { x: -200, y: -200 };
+        var current = { x: -200, y: -200 };
+        var angle = -NOSE_OFFSET;
+        var boost = 0;
+
+        window.addEventListener(
+          "pointermove",
+          function (e) {
+            target.x = e.clientX;
+            target.y = e.clientY;
+          },
+          { passive: true }
+        );
+
+        window.addEventListener(
+          "pointerdown",
+          function (e) {
+            boost = 1;
+            var puff = document.createElement("span");
+            puff.className = "plane-trail";
+            puff.style.left = e.clientX + "px";
+            puff.style.top = e.clientY + "px";
+            layer.appendChild(puff);
+            window.setTimeout(function () {
+              puff.remove();
+            }, 750);
+          },
+          { passive: true }
+        );
+
+        function tick() {
+          var dx = target.x - current.x;
+          var dy = target.y - current.y;
+          var dist = Math.hypot(dx, dy);
+
+          current.x += dx * 0.18;
+          current.y += dy * 0.18;
+
+          if (dist > 2) {
+            var desired = (Math.atan2(dy, dx) * 180) / Math.PI;
+            var diff = ((desired - angle + 540) % 360) - 180;
+            angle += diff * 0.15;
+          }
+
+          if (boost > 0) boost = Math.max(0, boost - 0.035);
+          var lift = boost * 18;
+          var scale = 1 + boost * 0.45;
+
+          plane.style.transform =
+            "translate3d(" +
+            current.x +
+            "px, " +
+            current.y +
+            "px, 0) translate(-50%, -50%) rotate(" +
+            (angle + NOSE_OFFSET) +
+            "deg) translateX(" +
+            lift +
+            "px) scale(" +
+            scale +
+            ")";
+
+          requestAnimationFrame(tick);
+        }
+
+        requestAnimationFrame(tick);
+      })();
+    </script>
+  </body>
+</html>

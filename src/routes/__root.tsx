@@ -15,7 +15,9 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFab } from "@/components/site/WhatsAppFab";
 import { PlaneCursor } from "@/components/site/PlaneCursor";
+import { MaintenancePage } from "@/components/site/MaintenancePage";
 import { Toaster } from "@/components/ui/sonner";
+import { isMaintenanceMode } from "@/lib/maintenance";
 
 function NotFoundComponent() {
   return (
@@ -133,6 +135,14 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+
+  if (isMaintenanceMode) {
+    return (
+      <QueryClientProvider client={queryClient}>
+        <MaintenancePage />
+      </QueryClientProvider>
+    );
+  }
 
   return (
     <QueryClientProvider client={queryClient}>

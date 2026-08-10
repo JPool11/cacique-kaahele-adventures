@@ -8,6 +8,8 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
+    "preview:maintenance": "npx --yes serve maintenance -p 4174",
+    "deploy:pages": "npx --yes gh-pages -d maintenance -b gh-pages --dotfiles",
     "lint": "eslint .",
     "format": "prettier --write ."
   },

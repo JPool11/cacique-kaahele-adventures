@@ -1,12 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 
+/** Lucide Plane fuselage axis (wing-root → nose) is ~-37°, not a flat -45°. */
+const NOSE_OFFSET = 37;
+
 export function PlaneCursor() {
   const [enabled, setEnabled] = useState(false);
   const planeRef = useRef<HTMLDivElement | null>(null);
   const layerRef = useRef<HTMLDivElement | null>(null);
   const target = useRef({ x: -200, y: -200 });
   const current = useRef({ x: -200, y: -200 });
-  const angle = useRef(-45);
+  const angle = useRef(-NOSE_OFFSET);
   const boost = useRef(0);
   const raf = useRef<number | null>(null);
 
@@ -53,7 +56,7 @@ export function PlaneCursor() {
 
       const el = planeRef.current;
       if (el) {
-        el.style.transform = `translate3d(${current.current.x}px, ${current.current.y}px, 0) translate(-50%, -50%) rotate(${angle.current}deg) translateX(${lift}px) scale(${scale})`;
+        el.style.transform = `translate3d(${current.current.x}px, ${current.current.y}px, 0) translate(-50%, -50%) rotate(${angle.current + NOSE_OFFSET}deg) translateX(${lift}px) scale(${scale})`;
       }
       raf.current = requestAnimationFrame(tick);
     };
@@ -75,11 +78,18 @@ export function PlaneCursor() {
     <div aria-hidden="true" ref={layerRef} className="pointer-events-none fixed inset-0 z-[9999] hidden md:block">
       <div ref={planeRef} className="absolute top-0 left-0 will-change-transform">
         <svg viewBox="0 0 24 24" className="size-7 drop-shadow-[0_2px_6px_rgba(0,0,0,0.45)]">
+          <defs>
+            <linearGradient id="plane-cursor-fill" x1="4" y1="2" x2="20" y2="22" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="var(--color-coral, #ff6b4a)" />
+              <stop offset="48%" stopColor="var(--color-coral, #ff6b4a)" />
+              <stop offset="52%" stopColor="var(--color-sun, #f7a53b)" />
+              <stop offset="100%" stopColor="var(--color-sun, #f7a53b)" />
+            </linearGradient>
+          </defs>
           <path
-            d="M22.5 12 2.8 20.6c-.6.3-1.2-.4-.8-.9L6.6 12 2 4.3c-.4-.6.2-1.2.8-.9L22.5 12Z"
-            className="fill-[color:var(--color-sun,#f7a53b)]"
+            d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"
+            fill="url(#plane-cursor-fill)"
           />
-          <path d="M6.6 12 2 4.3c-.4-.6.2-1.2.8-.9L22.5 12H6.6Z" className="fill-[color:var(--color-coral,#ff6b4a)]" />
         </svg>
       </div>
     </div>

@@ -31,8 +31,9 @@ export function Salidas() {
                   <p className="text-sm font-bold tracking-wide text-sun uppercase">{t.salida}</p>
                   <h3 className="mt-1 truncate text-xl font-extrabold sm:text-2xl">{t.nombre}</h3>
                   <p className="mt-1 text-sm text-on-ink/65">
-                    {t.duracion} · {t.lugar}
+                    {t.duracion} · {t.lugar} · Sale de {t.ciudadSalida}
                   </p>
+
                 </div>
                 <Link
                   to="/tours/$slug"

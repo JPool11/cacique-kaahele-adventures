@@ -109,7 +109,7 @@ function TourPage() {
           <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold">
             <li className="inline-flex items-center gap-2"><MapPin className="size-4 text-sun" aria-hidden="true" /> {tour.lugar}, {tour.pais}</li>
             <li className="inline-flex items-center gap-2"><Clock className="size-4 text-sun" aria-hidden="true" /> {tour.duracion}</li>
-            <li className="inline-flex items-center gap-2"><CalendarDays className="size-4 text-sun" aria-hidden="true" /> Salida {tour.salida}</li>
+            <li className="inline-flex items-center gap-2"><CalendarDays className="size-4 text-sun" aria-hidden="true" /> Salida {tour.salida} · desde {tour.ciudadSalida}</li>
             <li className="inline-flex items-center gap-2"><Users className="size-4 text-sun" aria-hidden="true" /> {tour.viajeros.toLocaleString("es-CO")} viajeros</li>
             <li className="inline-flex items-center gap-2"><Star className="size-4 fill-sun text-sun" aria-hidden="true" /> {tour.rating.toFixed(1)} / 5</li>
           </ul>
@@ -253,9 +253,17 @@ function TourPage() {
 
             <dl className="mt-6 space-y-3 border-t border-border pt-5 text-sm">
               <div className="flex justify-between gap-3"><dt className="text-muted-foreground">Salida</dt><dd className="font-bold">{tour.salida}</dd></div>
+              <div className="flex justify-between gap-3"><dt className="text-muted-foreground">Ciudad de salida</dt><dd className="font-bold">{tour.ciudadSalida}</dd></div>
+              {tour.otrasSalidas?.map((s) => (
+                <div key={s.ciudad} className="flex justify-between gap-3">
+                  <dt className="text-muted-foreground">Desde {s.ciudad}</dt>
+                  <dd className="font-bold">{formatCOP(s.precio)}</dd>
+                </div>
+              ))}
               <div className="flex justify-between gap-3"><dt className="text-muted-foreground">Duración</dt><dd className="font-bold">{tour.duracion}</dd></div>
               <div className="flex justify-between gap-3"><dt className="text-muted-foreground">Nivel</dt><dd className="font-bold">{["Suave", "Moderado", "Intenso"][tour.aventura - 1]}</dd></div>
             </dl>
+
 
             <a
               href={WHATSAPP}

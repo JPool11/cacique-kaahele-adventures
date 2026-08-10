@@ -44,7 +44,13 @@ export function TourCard({ tour, priority = false }: { tour: Tour; priority?: bo
             <dt className="sr-only">Viajeros</dt>
             <dd>{tour.viajeros.toLocaleString("es-CO")} viajeros</dd>
           </div>
+          <div className="inline-flex items-center gap-1.5">
+            <MapPin className="size-4 text-coral" aria-hidden="true" />
+            <dt className="sr-only">Ciudad de salida</dt>
+            <dd>Sale de {tour.ciudadSalida}</dd>
+          </div>
         </dl>
+
 
         <div className="mt-5 flex items-end justify-between gap-3 border-t border-border pt-4">
           <p className="text-sm text-muted-foreground">

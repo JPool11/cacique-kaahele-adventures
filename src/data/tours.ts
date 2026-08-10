@@ -117,7 +117,7 @@ export const tours: Tour[] = [
     descripcion:
       "Cinco días en la isla donde el mar cambia de color cada 100 metros: Johnny Cay, Acuario, Hoyo Soplador y la vuelta a la isla en carrito de golf.",
     destacados: ["Johnny Cay y Acuario", "Snorkel en arrecife", "Vuelta a la isla al atardecer"],
-    incluye: ["Salida desde El Pital, Huila", "Transporte terrestre y aéreo", "Tiquetes aéreos", "4 noches con desayuno", "Tarjeta de turismo", "Tour náutico", "Traslados aeropuerto-hotel", "Asistencia médica"],
+    incluye: ["Salida desde El Pital, Huila", "Transporte terrestre y aéreo", "4 noches con desayuno", "Tarjeta de turismo", "Tour náutico", "Traslados aeropuerto-hotel", "Asistencia médica"],
     noIncluye: ["Impuesto de salida", "Almuerzos y cenas", "Deportes náuticos extra"],
     recomendaciones: ["Bloqueador biodegradable", "Traje de baño y toalla rápida", "Cédula o pasaporte vigente"],
     itinerario: [
@@ -148,7 +148,7 @@ export const tours: Tour[] = [
     descripcion:
       "Historia, color y mar en el mismo viaje: murallas al atardecer, playas de arena blanca en Barú y la energía del Caribe hasta la madrugada.",
     destacados: ["Ciudad amurallada", "Islas del Rosario", "Atardecer en Café del Mar"],
-    incluye: ["Salida desde El Pital, Huila", "Transporte terrestre y aéreo", "Transporte", "3 noches de hotel", "Desayunos", "Tour a islas con almuerzo", "City tour", "Seguro de viaje"],
+    incluye: ["Salida desde El Pital, Huila", "Transporte terrestre y aéreo", "3 noches de hotel", "Desayunos", "Tour a islas con almuerzo", "City tour", "Seguro de viaje"],
     noIncluye: ["Impuesto de muelle", "Cenas", "Bebidas"],
     recomendaciones: ["Ropa de lino y sombrero", "Hidratación constante", "Sandalias cómodas"],
     itinerario: [
@@ -178,7 +178,7 @@ export const tours: Tour[] = [
     descripcion:
       "Del corazón azteca al paraíso maya: Teotihuacán, Coyoacán, Chichén Itzá, cenotes secretos y días enteros de playa en Cancún.",
     destacados: ["Teotihuacán", "Chichén Itzá", "Cenotes de Yucatán", "Playa Delfines"],
-    incluye: ["Salida desde El Pital, Huila", "Transporte terrestre y aéreo", "Vuelos internacionales", "7 noches de alojamiento", "Desayunos", "Tours descritos", "Traslados", "Asistencia médica internacional"],
+    incluye: ["Salida desde El Pital, Huila", "Transporte terrestre y aéreo", "7 noches de alojamiento", "Desayunos", "Tours descritos", "Traslados", "Asistencia médica internacional"],
     noIncluye: ["Visa si aplica", "Comidas no descritas", "Propinas"],
     recomendaciones: ["Pasaporte con 6 meses de vigencia", "Dólares o pesos mexicanos", "Repelente"],
     itinerario: [
@@ -242,7 +242,7 @@ export const tours: Tour[] = [
     descripcion:
       "El paisaje cultural cafetero declarado Patrimonio de la Humanidad: caminatas entre neblina, catación de café de origen y pueblos que parecen de acuarela.",
     destacados: ["Valle del Cocora", "Finca cafetera y catación", "Filandia y Salento"],
-    incluye: ["Salida desde El Pital, Huila", "Transporte terrestre y aéreo", "Transporte", "3 noches en finca-hotel", "Desayunos", "Tour del café", "Caminata guiada", "Seguro de viaje"],
+    incluye: ["Salida desde El Pital, Huila", "Transporte terrestre y aéreo", "3 noches en finca-hotel", "Desayunos", "Tour del café", "Caminata guiada", "Seguro de viaje"],
     noIncluye: ["Willys al Cocora", "Cenas", "Gastos personales"],
     recomendaciones: ["Impermeable ligero", "Botas de caminata", "Ropa de cambio"],
     itinerario: [
@@ -272,7 +272,7 @@ export const tours: Tour[] = [
     descripcion:
       "Senderos entre selva húmeda, playas de arena dorada rodeadas de rocas milenarias y noches escuchando el mar desde una hamaca.",
     destacados: ["Cabo San Juan del Guía", "Playa Cristal", "Piscina natural de Arrecifes"],
-    incluye: ["Salida desde El Pital, Huila", "Transporte terrestre y aéreo", "Transporte", "Entrada al parque", "2 noches de alojamiento ecológico", "Alimentación completa", "Guía interpretativo", "Seguro de aventura"],
+    incluye: ["Salida desde El Pital, Huila", "Transporte terrestre y aéreo", "Entrada al parque", "2 noches de alojamiento ecológico", "Alimentación completa", "Guía interpretativo", "Seguro de aventura"],
     noIncluye: ["Alquiler de caballo", "Bebidas", "Souvenirs"],
     recomendaciones: ["Mochila liviana", "Repelente y bloqueador", "Buen estado físico"],
     itinerario: [
@@ -301,7 +301,7 @@ export const tours: Tour[] = [
     descripcion:
       "La bahía más linda de América combinada con la sierra: café de altura en Minca, playas de Taganga y noches en el Camellón.",
     destacados: ["Bahía de Santa Marta", "Minca y cascadas", "Taganga"],
-    incluye: ["Salida desde El Pital, Huila", "Transporte terrestre y aéreo", "Transporte", "3 noches de hotel", "Desayunos", "Tour a Minca", "Traslados", "Seguro de viaje"],
+    incluye: ["Salida desde El Pital, Huila", "Transporte terrestre y aéreo", "3 noches de hotel", "Desayunos", "Tour a Minca", "Traslados", "Seguro de viaje"],
     noIncluye: ["Cenas", "Actividades opcionales"],
     recomendaciones: ["Ropa fresca", "Traje de baño", "Zapatos para caminata suave"],
     itinerario: [
@@ -331,7 +331,7 @@ export const tours: Tour[] = [
     descripcion:
       "Cada año las ballenas jorobadas recorren miles de kilómetros para dar a luz en el Pacífico colombiano. Verlas saltar a pocos metros no se olvida jamás.",
     destacados: ["Avistamiento de ballenas", "Cascada La Sierpe", "Gastronomía del Pacífico"],
-    incluye: ["Salida desde El Pital, Huila", "Transporte terrestre y aéreo", "Transporte y lancha", "4 noches en eco-lodge", "Alimentación completa", "Avistamiento con biólogo", "Chalecos y equipo", "Seguro de aventura"],
+    incluye: ["Salida desde El Pital, Huila", "Transporte terrestre y aéreo", "4 noches en eco-lodge", "Alimentación completa", "Avistamiento con biólogo", "Chalecos y equipo", "Seguro de aventura"],
     noIncluye: ["Bebidas alcohólicas", "Gastos personales"],
     recomendaciones: ["Impermeable", "Pastillas para el mareo", "Cámara con protección de agua"],
     itinerario: [
@@ -362,7 +362,7 @@ export const tours: Tour[] = [
     descripcion:
       "Un plan divertido y diferente: flotar en el volcán de lodo, enjuagarse en el mar Caribe y cerrar el día con pescado fresco al atardecer.",
     destacados: ["Volcán de lodo", "Playa del Sol", "Atardecer caribeño"],
-    incluye: ["Salida desde El Pital, Huila", "Transporte terrestre y aéreo", "Transporte", "2 noches de hotel", "Desayunos", "Entrada al volcán", "Guía acompañante", "Seguro de viaje"],
+    incluye: ["Salida desde El Pital, Huila", "Transporte terrestre y aéreo", "2 noches de hotel", "Desayunos", "Entrada al volcán", "Guía acompañante", "Seguro de viaje"],
     noIncluye: ["Almuerzos", "Bebidas", "Propinas"],
     recomendaciones: ["Ropa que se pueda manchar", "Toalla extra", "Sandalias"],
     itinerario: [

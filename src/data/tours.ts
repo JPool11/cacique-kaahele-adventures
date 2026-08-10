@@ -86,7 +86,7 @@ export const tours: Tour[] = [
     descripcion:
       "Medellín moderna, comuna 13 con su arte urbano y el Peñón de Guatapé con 740 escalones hacia una de las vistas más impresionantes de Colombia.",
     destacados: ["Peñón de Guatapé", "Grafitour Comuna 13", "Paseo en bote por el embalse"],
-    incluye: ["Salida desde El Pital, Huila", "Transporte terrestre y aéreo", "Vuelos o transporte terrestre", "4 noches de hotel", "Desayunos", "Tours guiados", "Traslados internos", "Seguro de viaje"],
+    incluye: ["Salida desde El Pital, Huila", "Transporte terrestre y aéreo", "4 noches de hotel", "Desayunos", "Tours guiados", "Traslados internos", "Seguro de viaje"],
     noIncluye: ["Cenas", "Impuestos hoteleros opcionales", "Gastos personales"],
     recomendaciones: ["Protector solar", "Ropa fresca", "Efectivo para artesanías"],
     itinerario: [
@@ -210,7 +210,7 @@ export const tours: Tour[] = [
     descripcion:
       "Fe, historia y frontera: el santuario gótico más impresionante de América, Otavalo, la Mitad del Mundo y el casco colonial de Quito.",
     destacados: ["Santuario de Las Lajas", "Mitad del Mundo", "Mercado de Otavalo"],
-    incluye: ["Salida desde El Pital, Huila", "Transporte terrestre y aéreo", "Transporte terrestre", "5 noches de alojamiento", "Desayunos", "Guía acompañante", "Entradas", "Seguro internacional"],
+    incluye: ["Salida desde El Pital, Huila", "Transporte terrestre y aéreo", "5 noches de alojamiento", "Desayunos", "Guía acompañante", "Entradas", "Seguro internacional"],
     noIncluye: ["Almuerzos y cenas", "Gastos personales"],
     recomendaciones: ["Documento de identidad vigente", "Ropa por capas", "Efectivo en dólares"],
     itinerario: [

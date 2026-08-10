@@ -65,11 +65,20 @@ export function MaintenancePage() {
           className="h-16 w-auto drop-shadow-[0_4px_24px_rgba(0,0,0,0.35)] sm:h-20"
         />
 
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="mt-6 text-xs font-bold tracking-[0.18em] text-on-ocean/75 uppercase"
+        >
+          Agencia de turismo
+        </motion.p>
+
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-10 font-display text-[clamp(2.25rem,7vw,3.75rem)] leading-[1.05] font-extrabold text-on-ocean"
+          className="mt-4 font-display text-[clamp(2.25rem,7vw,3.75rem)] leading-[1.05] font-extrabold text-on-ocean"
         >
           Sitio en <span className="text-gradient-sunset">construcción</span>
         </motion.h1>
@@ -80,8 +89,8 @@ export function MaintenancePage() {
           transition={{ duration: 0.75, delay: 0.3 }}
           className="mt-5 text-base leading-relaxed text-on-ocean/80 sm:text-lg"
         >
-          Estamos preparando algo especial para tus próximas aventuras. Pronto podrás explorar
-          destinos, salidas y reservar con nosotros aquí.
+          Somos una agencia de turismo y estamos preparando algo especial para tus próximas
+          aventuras. Pronto podrás explorar destinos, salidas y reservar con nosotros aquí.
         </motion.p>
 
         <motion.div

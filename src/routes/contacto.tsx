@@ -3,7 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Mail, Phone, MapPin, Instagram, Facebook } from "lucide-react";
 import { toast } from "sonner";
 import { Reveal } from "@/components/site/Reveal";
-import { tours, WHATSAPP } from "@/data/tours";
+import { tours, WHATSAPP, GOOGLE_MAPS_URL, GOOGLE_MAPS_EMBED } from "@/data/tours";
 
 function TikTokIcon({ className }: { className?: string }) {
   return (
@@ -179,14 +179,25 @@ function Contacto() {
               </div>
             </div>
 
-            <div className="overflow-hidden rounded-[2rem] border border-border">
+            <a
+              href={GOOGLE_MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Abrir ubicación de Cacique Kaahele en Google Maps"
+              className="focus-ring group relative block overflow-hidden rounded-[2rem] border border-border"
+            >
               <iframe
                 title="Mapa de la oficina de Cacique Kaahele en Pital, Huila"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=-75.8146%2C2.2561%2C-75.7946%2C2.2761&layer=mapnik&marker=2.2661%2C-75.8046"
-                className="h-80 w-full"
+                src={GOOGLE_MAPS_EMBED}
+                className="pointer-events-none h-80 w-full"
                 loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
               />
-            </div>
+              <span className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/70 to-transparent px-4 py-3 text-sm font-bold text-on-ink opacity-90 transition-opacity group-hover:opacity-100">
+                Abrir en Google Maps
+              </span>
+            </a>
           </Reveal>
         </div>
       </section>

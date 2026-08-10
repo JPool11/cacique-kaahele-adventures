@@ -500,6 +500,12 @@ export const formatCOP = (v: number) =>
 export const WHATSAPP =
   "https://wa.me/573203778945?text=Hola%20Cacique%20Kaahele,%20quiero%20informaci%C3%B3n%20de%20un%20viaje";
 
+export const GOOGLE_MAPS_URL =
+  "https://www.google.com/maps/place/Agencia+de+Turismo+Cacique+Kaahele/data=!4m2!3m1!1s0x0:0x8d36f54e3ffa3beb";
+
+export const GOOGLE_MAPS_EMBED =
+  "https://www.google.com/maps?q=Agencia+de+Turismo+Cacique+Kaahele&hl=es&z=16&output=embed";
+
 const imagenes: Record<string, string> = {
   boyaca,
   antioquia,

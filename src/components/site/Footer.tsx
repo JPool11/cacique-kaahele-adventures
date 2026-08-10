@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Facebook, Youtube, Mail, Phone, MapPin } from "lucide-react";
 import logo from "@/assets/logo.png";
-import { WHATSAPP, tours } from "@/data/tours";
+import { WHATSAPP, tours, GOOGLE_MAPS_URL, GOOGLE_MAPS_EMBED } from "@/data/tours";
 
 export function Footer() {
   return (
@@ -83,14 +83,22 @@ export function Footer() {
           >
             Solicitar asesoría
           </a>
-          <div className="mt-5 overflow-hidden rounded-2xl border border-white/10">
+          <a
+            href={GOOGLE_MAPS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Abrir ubicación de Cacique Kaahele en Google Maps"
+            className="focus-ring mt-5 block overflow-hidden rounded-2xl border border-white/10"
+          >
             <iframe
               title="Ubicación de Cacique Kaahele en Pital, Huila"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=-75.8146%2C2.2561%2C-75.7946%2C2.2761&layer=mapnik&marker=2.2661%2C-75.8046"
-              className="h-36 w-full"
+              src={GOOGLE_MAPS_EMBED}
+              className="pointer-events-none h-36 w-full"
               loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
             />
-          </div>
+          </a>
         </div>
       </div>
 

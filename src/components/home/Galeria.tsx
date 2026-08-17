@@ -1,15 +1,30 @@
 import { Reveal } from "@/components/site/Reveal";
-import { pic } from "@/data/tours";
+import laguna from "@/assets/galeria-laguna.webp";
+import iglesia from "@/assets/galeria-iglesia.webp";
+import lancha from "@/assets/galeria-lancha.webp";
+import laguna2 from "@/assets/galeria-laguna-2.webp";
+import boyacense from "@/assets/galeria-boyacense.webp";
+import vargas from "@/assets/galeria-vargas.webp";
+import selfie from "@/assets/galeria-selfie.webp";
+import playa from "@/assets/galeria-playa.webp";
+import aeropuerto from "@/assets/galeria-aeropuerto.webp";
+import mexico from "@/assets/galeria-mexico.webp";
+import cancun from "@/assets/galeria-cancun.webp";
+import barco from "@/assets/galeria-barco.webp";
 
 const items = [
-  { src: pic("san-andres-islas"), alt: "Playa de aguas turquesa en San Andrés", span: "row-span-2" },
-  { src: pic("eje-cafetero"), alt: "Palmas de cera del Valle del Cocora", span: "" },
-  { src: pic("caribe-colombiano"), alt: "Balcones coloniales de Cartagena", span: "" },
-  { src: pic("parque-tairona"), alt: "Playa y rocas del Parque Tairona", span: "row-span-2" },
-  { src: pic("valle-y-pacifico-colombiano"), alt: "Ballena jorobada saltando en el Pacífico", span: "" },
-  { src: pic("santa-marta"), alt: "Atardecer en la bahía de Santa Marta", span: "" },
-  { src: pic("antioquia"), alt: "Peñón de Guatapé y su embalse", span: "" },
-  { src: pic("ciudad-de-mexico-y-cancun"), alt: "Pirámide maya frente al mar turquesa", span: "row-span-2" },
+  { src: laguna, alt: "Grupo de viajeros de Cacique Kaahele junto a una laguna de montaña" },
+  { src: iglesia, alt: "Viajeros con el pendón de Cacique Kaahele frente a una iglesia colonial" },
+  { src: lancha, alt: "Grupo en lancha con chalecos salvavidas durante un tour de Cacique Kaahele" },
+  { src: laguna2, alt: "Viajeros sonrientes con la bandera de Colombia en un paisaje de laguna" },
+  { src: boyacense, alt: "Viajeras en el Pueblito Boyacense con el logo de Cacique Kaahele" },
+  { src: vargas, alt: "Grupo del Tour por Boyacá en el Monumento a los Lanceros" },
+  { src: selfie, alt: "Selfie de un grupo de viajeros con el pendón de Cacique Kaahele" },
+  { src: playa, alt: "Viajeros de Cacique Kaahele en un malecón frente al mar Caribe" },
+  { src: aeropuerto, alt: "Grupo de viajeros con la bandera de Colombia en el aeropuerto" },
+  { src: mexico, alt: "Viajeros de Cacique Kaahele en una plaza colonial de México" },
+  { src: cancun, alt: "Grupo de viajeros en el letrero de Cancún con la bandera de Colombia" },
+  { src: barco, alt: "Viajeros de Cacique Kaahele frente al barco Captain Hook en Cancún" },
 ];
 
 export function Galeria() {
@@ -36,7 +51,7 @@ export function Galeria() {
                   width={900}
                   height={1200}
                   loading="lazy"
-                  className={`w-full object-cover transition-transform duration-[900ms] group-hover:scale-110 ${i % 3 === 0 ? "aspect-[3/4]" : "aspect-square"}`}
+                  className="w-full object-cover transition-transform duration-[900ms] group-hover:scale-110"
                 />
                 <figcaption className="absolute inset-0 flex items-end bg-gradient-to-t from-ink/80 to-transparent p-4 text-sm font-semibold text-on-ocean opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                   {it.alt}

@@ -1,4 +1,7 @@
-import boyaca from "@/assets/dest-boyaca.jpg";
+import boyaca from "@/assets/dest-boyaca.webp";
+import boyacaPueblito from "@/assets/dest-boyaca-pueblito.webp";
+import boyacaJaimeDuque from "@/assets/dest-boyaca-jaime-duque.webp";
+import boyacaVargas from "@/assets/dest-boyaca-vargas.webp";
 import antioquia from "@/assets/dest-antioquia.jpg";
 import sanandres from "@/assets/dest-sanandres.jpg";
 import caribe from "@/assets/dest-caribe.jpg";
@@ -360,6 +363,24 @@ export const tours: Tour[] = [
     salida: "17 al 21 de julio, 2026",
     salidaISO: "2026-07-17",
     imagen: boyaca,
+    galeria: [
+      {
+        src: boyaca,
+        alt: "Puente de Boyacá y plaza de banderas en el campo de batalla de la independencia",
+      },
+      {
+        src: boyacaPueblito,
+        alt: "Calle colonial del Pueblito Boyacense con casas blancas, tejas y flores",
+      },
+      {
+        src: boyacaJaimeDuque,
+        alt: "Vista aérea del Parque Jaime Duque en Tocancipá, Cundinamarca",
+      },
+      {
+        src: boyacaVargas,
+        alt: "Monumento a los Lanceros en el Pantano de Vargas, Boyacá",
+      },
+    ],
     resumen: "Pueblos coloniales, catedral de sal y cielos andinos infinitos.",
     descripcion:
       "Un recorrido por el corazón andino de Colombia: calles empedradas, plazas gigantes, gastronomía boyacense y paisajes de montaña que parecen pintados a mano.",

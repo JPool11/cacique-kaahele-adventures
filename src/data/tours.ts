@@ -11,7 +11,11 @@ import sanandresCarpas from "@/assets/dest-sanandres-carpas.webp";
 import sanandresJohnny from "@/assets/dest-sanandres-johnny.webp";
 import sanandresArrecife from "@/assets/dest-sanandres-arrecife.webp";
 import sanandresNorthend from "@/assets/dest-sanandres-northend.webp";
-import caribe from "@/assets/dest-caribe.jpg";
+import caribe from "@/assets/dest-caribe.webp";
+import caribeRodadero from "@/assets/dest-caribe-rodadero.webp";
+import caribeCabo from "@/assets/dest-caribe-cabo.webp";
+import caribeBarranquilla from "@/assets/dest-caribe-barranquilla.webp";
+import caribeTayrona from "@/assets/dest-caribe-tayrona.webp";
 import mexico from "@/assets/dest-mexico.jpg";
 import lajas from "@/assets/dest-lajas.webp";
 import lajasMirador from "@/assets/dest-lajas-mirador.webp";
@@ -98,6 +102,29 @@ const galeriaHuila = [
   {
     src: huilaPital,
     alt: "Iglesia de El Pital, Huila, con torre blanca y detalles terracota",
+  },
+];
+
+const galeriaCaribe = [
+  {
+    src: caribe,
+    alt: "Torre del Reloj y murallas de Cartagena de Indias, Caribe colombiano",
+  },
+  {
+    src: caribeRodadero,
+    alt: "Vista aérea de El Rodadero en Santa Marta, con playa y edificios frente al mar",
+  },
+  {
+    src: caribeCabo,
+    alt: "Cabo San Juan del Guía en el Parque Tayrona, con palapa sobre la isla rocosa",
+  },
+  {
+    src: caribeBarranquilla,
+    alt: "Monumento Ventana al Mundo en Barranquilla, Caribe colombiano",
+  },
+  {
+    src: caribeTayrona,
+    alt: "Playa del Parque Tayrona con palmeras, mar turquesa y mirador de palapa",
   },
 ];
 
@@ -523,6 +550,7 @@ export const tours: Tour[] = [
     salida: "17 al 22 de septiembre, 2026",
     salidaISO: "2026-09-17",
     imagen: caribe,
+    galeria: galeriaCaribe,
     resumen: "Murallas coloniales, islas del Rosario y bahías doradas.",
     descripcion:
       "El Caribe colombiano completo: la ciudad amurallada, islas de agua cristalina y el encanto samario con su sierra al fondo.",
@@ -625,6 +653,7 @@ export const tours: Tour[] = [
     salida: "4 al 9 de diciembre, 2026",
     salidaISO: "2026-12-04",
     imagen: caribe,
+    galeria: galeriaCaribe,
     resumen: "Cierra el año con murallas iluminadas y mar turquesa.",
     descripcion:
       "La misma ruta caribeña, en su versión decembrina: Cartagena en temporada de luces, islas del Rosario y Santa Marta.",

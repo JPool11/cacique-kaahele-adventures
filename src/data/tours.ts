@@ -20,7 +20,12 @@ import arboletesCastillo from "@/assets/dest-arboletes-castillo.webp";
 import arboletesHotel from "@/assets/dest-arboletes-hotel.webp";
 import arboletesMinigolf from "@/assets/dest-arboletes-minigolf.webp";
 import murillo from "@/assets/dest-murillo.jpg";
-import huila from "@/assets/dest-huila.jpg";
+import huila from "@/assets/dest-huila.webp";
+import huilaTatacoa from "@/assets/dest-huila-tatacoa.webp";
+import huilaMano from "@/assets/dest-huila-mano.webp";
+import huilaPital from "@/assets/dest-huila-pital.webp";
+import huilaSanAgustin from "@/assets/dest-huila-san-agustin.webp";
+import huilaBuho from "@/assets/dest-huila-buho.webp";
 import amazonas from "@/assets/dest-amazonas.jpg";
 import oculto from "@/assets/dest-oculto.jpg";
 
@@ -57,6 +62,33 @@ const incluyeBase = (extra: string[]) => [
   ...extra,
   "Guía acompañante certificado",
   "Seguro de asistencia en viaje",
+];
+
+const galeriaHuila = [
+  {
+    src: huila,
+    alt: "Laberintos de tierra roja en el Desierto de la Tatacoa, Huila",
+  },
+  {
+    src: huilaTatacoa,
+    alt: "Formaciones rojas y cactus en el Desierto de la Tatacoa, Huila",
+  },
+  {
+    src: huilaSanAgustin,
+    alt: "Estatuas monolíticas del Parque Arqueológico de San Agustín, Huila",
+  },
+  {
+    src: huilaBuho,
+    alt: "Escultura precolombina del búho en el Parque Arqueológico de San Agustín",
+  },
+  {
+    src: huilaMano,
+    alt: "Mirador La Mano del Gigante sobre el valle del Huila",
+  },
+  {
+    src: huilaPital,
+    alt: "Iglesia de El Pital, Huila, con torre blanca y detalles terracota",
+  },
 ];
 
 export const tours: Tour[] = [
@@ -223,6 +255,7 @@ export const tours: Tour[] = [
     salida: "11 al 14 de mayo, 2026",
     salidaISO: "2026-05-11",
     imagen: huila,
+    galeria: galeriaHuila,
     resumen: "Desierto rojo, estrellas y la cuna arqueológica de Colombia.",
     descripcion:
       "Del Desierto de la Tatacoa a los parques arqueológicos de San Agustín: cielos limpios para observación astronómica y cultura milenaria.",
@@ -253,7 +286,8 @@ export const tours: Tour[] = [
     rating: 4.9,
     salida: "12 al 14 de mayo, 2026",
     salidaISO: "2026-05-12",
-    imagen: huila,
+    imagen: huilaPital,
+    galeria: [galeriaHuila[5]!, galeriaHuila[4]!, ...galeriaHuila.slice(0, 4)],
     resumen: "Redescubre el Huila: tradición, café y paisajes de casa.",
     descripcion:
       "Un recorrido pensado para los locales: pueblos, fincas cafeteras, gastronomía opita y los rincones que casi nadie conoce del departamento.",

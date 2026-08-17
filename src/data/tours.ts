@@ -33,7 +33,9 @@ import tulcan3 from "@/assets/dest-tulcan-3.webp";
 import tulcan4 from "@/assets/dest-tulcan-4.webp";
 import cocha from "@/assets/dest-cocha.webp";
 import cafetero from "@/assets/dest-cafetero.jpg";
-import tairona from "@/assets/dest-tairona.jpg";
+import tairona from "@/assets/dest-tairona.webp";
+import tairona2 from "@/assets/dest-tairona-2.webp";
+import tairona3 from "@/assets/dest-tairona-3.webp";
 import santamarta from "@/assets/dest-santamarta.jpg";
 import pacifico from "@/assets/dest-pacifico.jpg";
 import arboletes from "@/assets/dest-arboletes.webp";
@@ -728,6 +730,20 @@ export const tours: Tour[] = [
     salida: "11 al 13 de diciembre, 2026",
     salidaISO: "2026-12-11",
     imagen: tairona,
+    galeria: [
+      {
+        src: tairona,
+        alt: "Cabo San Juan del Guía en el Parque Tayrona, con palapa, playa y mar turquesa",
+      },
+      {
+        src: tairona2,
+        alt: "Playa de Cabo San Juan en Tayrona, palmeras y bahía de aguas claras",
+      },
+      {
+        src: tairona3,
+        alt: "Vista aérea de Cabo San Juan en el Parque Tayrona con lancha anclada",
+      },
+    ],
     resumen: "Donde la selva se lanza al mar. Plan ideal para grupos estudiantiles.",
     descripcion:
       "Senderos entre selva húmeda, playas de arena dorada rodeadas de rocas milenarias y acompañamiento permanente para grupos de colegio.",

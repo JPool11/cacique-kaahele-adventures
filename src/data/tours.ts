@@ -3,7 +3,14 @@ import antioquia from "@/assets/dest-antioquia.jpg";
 import sanandres from "@/assets/dest-sanandres.jpg";
 import caribe from "@/assets/dest-caribe.jpg";
 import mexico from "@/assets/dest-mexico.jpg";
-import lajas from "@/assets/dest-lajas.jpg";
+import lajas from "@/assets/dest-lajas.webp";
+import lajasMirador from "@/assets/dest-lajas-mirador.webp";
+import lajasNoche from "@/assets/dest-lajas-noche.webp";
+import tulcan from "@/assets/dest-tulcan.webp";
+import tulcan2 from "@/assets/dest-tulcan-2.webp";
+import tulcan3 from "@/assets/dest-tulcan-3.webp";
+import tulcan4 from "@/assets/dest-tulcan-4.webp";
+import cocha from "@/assets/dest-cocha.webp";
 import cafetero from "@/assets/dest-cafetero.jpg";
 import tairona from "@/assets/dest-tairona.jpg";
 import santamarta from "@/assets/dest-santamarta.jpg";
@@ -32,6 +39,7 @@ export type Tour = {
   salida: string;
   salidaISO: string;
   imagen: string;
+  galeria?: { src: string; alt: string }[];
   resumen: string;
   descripcion: string;
   destacados: string[];
@@ -96,6 +104,40 @@ export const tours: Tour[] = [
     salida: "27 de marzo al 1 de abril, 2026",
     salidaISO: "2026-03-27",
     imagen: lajas,
+    galeria: [
+      {
+        src: lajas,
+        alt: "Santuario de Las Lajas, catedral neogótica sobre el cañón del Guáitara en Ipiales, Colombia",
+      },
+      {
+        src: lajasMirador,
+        alt: "Vista del Santuario de Las Lajas y su puente de piedra desde el mirador en Ipiales",
+      },
+      {
+        src: lajasNoche,
+        alt: "Santuario de Las Lajas iluminado de noche sobre el cañón en Ipiales, Colombia",
+      },
+      {
+        src: tulcan,
+        alt: "Esculturas de ciprés en el Cementerio Municipal de Tulcán, Ecuador",
+      },
+      {
+        src: tulcan2,
+        alt: "Jardín de topiarios y arcos de ciprés en el Cementerio de Tulcán",
+      },
+      {
+        src: tulcan3,
+        alt: "Vista amplia del Cementerio de Tulcán con setos esculpidos y columbarios",
+      },
+      {
+        src: tulcan4,
+        alt: "Sendero entre topiarios de ciprés, incluido un colibrí, en el Cementerio de Tulcán",
+      },
+      {
+        src: cocha,
+        alt: "Canal y lanchas de colores en la Laguna de la Cocha, Nariño",
+      },
+    ],
     resumen: "Una catedral suspendida sobre el cañón y la mitad del mundo.",
     descripcion:
       "Fe, historia y frontera: el santuario gótico más impresionante de América, Otavalo, la Mitad del Mundo y el casco colonial de Quito.",

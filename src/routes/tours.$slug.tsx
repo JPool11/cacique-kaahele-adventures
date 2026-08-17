@@ -76,6 +76,10 @@ export const Route = createFileRoute("/tours/$slug")({
 function TourPage() {
   const { tour } = Route.useLoaderData() as { tour: Tour };
   const relacionados = tours.filter((t) => t.slug !== tour.slug).slice(0, 3);
+  const galeria = tour.galeria ?? [
+    { src: tour.imagen, alt: `Paisaje de ${tour.nombre}` },
+    ...relacionados.map((t) => ({ src: t.imagen, alt: `Paisaje de ${t.nombre}` })),
+  ];
 
   return (
     <>
@@ -131,11 +135,11 @@ function TourPage() {
           <Reveal>
             <h2 className="text-3xl font-extrabold">Galería</h2>
             <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3">
-              {[tour, ...relacionados].map((t, i) => (
+              {galeria.map((foto, i) => (
                 <img
-                  key={t.slug + i}
-                  src={t.imagen}
-                  alt={`Paisaje de ${t.nombre}`}
+                  key={`${foto.src}-${i}`}
+                  src={foto.src}
+                  alt={foto.alt}
                   width={900}
                   height={1200}
                   loading="lazy"

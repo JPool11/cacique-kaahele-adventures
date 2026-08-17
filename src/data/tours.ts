@@ -5,7 +5,12 @@ import boyacaVargas from "@/assets/dest-boyaca-vargas.webp";
 import antioquia from "@/assets/dest-antioquia.webp";
 import antioquiaPenol from "@/assets/dest-antioquia-penol.webp";
 import antioquiaGuatape from "@/assets/dest-antioquia-guatape.webp";
-import sanandres from "@/assets/dest-sanandres.jpg";
+import sanandres from "@/assets/dest-sanandres.webp";
+import sanandresLetrero from "@/assets/dest-sanandres-letrero.webp";
+import sanandresCarpas from "@/assets/dest-sanandres-carpas.webp";
+import sanandresJohnny from "@/assets/dest-sanandres-johnny.webp";
+import sanandresArrecife from "@/assets/dest-sanandres-arrecife.webp";
+import sanandresNorthend from "@/assets/dest-sanandres-northend.webp";
 import caribe from "@/assets/dest-caribe.jpg";
 import mexico from "@/assets/dest-mexico.jpg";
 import lajas from "@/assets/dest-lajas.webp";
@@ -461,6 +466,32 @@ export const tours: Tour[] = [
     salida: "21 al 24 de agosto, 2026",
     salidaISO: "2026-08-21",
     imagen: sanandres,
+    galeria: [
+      {
+        src: sanandres,
+        alt: "Playa de San Andrés con lanchas de colores, palmeras y mar turquesa",
+      },
+      {
+        src: sanandresLetrero,
+        alt: "Letrero I love San Andrés junto al malecón y las palmeras",
+      },
+      {
+        src: sanandresCarpas,
+        alt: "Carpas de playa azul y blanco bajo palmeras en San Andrés",
+      },
+      {
+        src: sanandresJohnny,
+        alt: "Agua turquesa y palmeras en Johnny Cay, San Andrés",
+      },
+      {
+        src: sanandresArrecife,
+        alt: "Vista aérea del mar de siete colores y arrecifes en San Andrés",
+      },
+      {
+        src: sanandresNorthend,
+        alt: "North End de San Andrés con playa, palmeras y el mar de siete colores",
+      },
+    ],
     resumen: "El mar de los siete colores, snorkel y atardeceres imposibles.",
     descripcion:
       "Días en la isla donde el mar cambia de color cada 100 metros: Johnny Cay, Acuario, Hoyo Soplador y la vuelta a la isla en carrito de golf.",

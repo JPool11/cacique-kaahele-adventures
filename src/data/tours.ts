@@ -15,7 +15,10 @@ import cafetero from "@/assets/dest-cafetero.jpg";
 import tairona from "@/assets/dest-tairona.jpg";
 import santamarta from "@/assets/dest-santamarta.jpg";
 import pacifico from "@/assets/dest-pacifico.jpg";
-import arboletes from "@/assets/dest-arboletes.jpg";
+import arboletes from "@/assets/dest-arboletes.webp";
+import arboletesCastillo from "@/assets/dest-arboletes-castillo.webp";
+import arboletesHotel from "@/assets/dest-arboletes-hotel.webp";
+import arboletesMinigolf from "@/assets/dest-arboletes-minigolf.webp";
 import murillo from "@/assets/dest-murillo.jpg";
 import huila from "@/assets/dest-huila.jpg";
 import amazonas from "@/assets/dest-amazonas.jpg";
@@ -172,6 +175,24 @@ export const tours: Tour[] = [
     salida: "17 al 19 de abril, 2026",
     salidaISO: "2026-04-17",
     imagen: arboletes,
+    galeria: [
+      {
+        src: arboletes,
+        alt: "Parque acuático con castillos de torres azules y piscina en Arboletes, Antioquia",
+      },
+      {
+        src: arboletesCastillo,
+        alt: "Castillos temáticos, toboganes y palapas junto a la piscina en Arboletes",
+      },
+      {
+        src: arboletesHotel,
+        alt: "Hotel Riviera del Sol con piscina y arquitectura de castillo en Arboletes",
+      },
+      {
+        src: arboletesMinigolf,
+        alt: "Mini golf frente al mar Caribe en Arboletes, Antioquia",
+      },
+    ],
     resumen: "El volcán de lodo más grande del mundo, frente al mar.",
     descripcion:
       "Un plan divertido y diferente: flotar en el volcán de lodo, enjuagarse en el mar Caribe y cerrar el día con pescado fresco al atardecer.",

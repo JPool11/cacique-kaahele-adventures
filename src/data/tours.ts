@@ -2,7 +2,9 @@ import boyaca from "@/assets/dest-boyaca.webp";
 import boyacaPueblito from "@/assets/dest-boyaca-pueblito.webp";
 import boyacaJaimeDuque from "@/assets/dest-boyaca-jaime-duque.webp";
 import boyacaVargas from "@/assets/dest-boyaca-vargas.webp";
-import antioquia from "@/assets/dest-antioquia.jpg";
+import antioquia from "@/assets/dest-antioquia.webp";
+import antioquiaPenol from "@/assets/dest-antioquia-penol.webp";
+import antioquiaGuatape from "@/assets/dest-antioquia-guatape.webp";
 import sanandres from "@/assets/dest-sanandres.jpg";
 import caribe from "@/assets/dest-caribe.jpg";
 import mexico from "@/assets/dest-mexico.jpg";
@@ -413,6 +415,20 @@ export const tours: Tour[] = [
     salida: "14 al 18 de agosto, 2026",
     salidaISO: "2026-08-14",
     imagen: antioquia,
+    galeria: [
+      {
+        src: antioquia,
+        alt: "Medellín al atardecer con el Palacio de la Cultura y el metro elevado",
+      },
+      {
+        src: antioquiaPenol,
+        alt: "La Piedra del Peñol en Guatapé, Antioquia, con su escalera en zigzag",
+      },
+      {
+        src: antioquiaGuatape,
+        alt: "Calle colorida de Guatapé con zócalos, flores y casas tradicionales",
+      },
+    ],
     resumen: "La ciudad de la eterna primavera y el embalse más colorido del país.",
     descripcion:
       "Medellín moderna, comuna 13 con su arte urbano y el Peñón de Guatapé con 740 escalones hacia una de las vistas más impresionantes de Colombia.",

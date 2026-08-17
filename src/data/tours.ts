@@ -16,7 +16,14 @@ import caribeRodadero from "@/assets/dest-caribe-rodadero.webp";
 import caribeCabo from "@/assets/dest-caribe-cabo.webp";
 import caribeBarranquilla from "@/assets/dest-caribe-barranquilla.webp";
 import caribeTayrona from "@/assets/dest-caribe-tayrona.webp";
-import mexico from "@/assets/dest-mexico.jpg";
+import mexico from "@/assets/dest-mexico.webp";
+import mexicoZocalo from "@/assets/dest-mexico-zocalo.webp";
+import mexicoBasilica from "@/assets/dest-mexico-basilica.webp";
+import mexicoGuadalupe from "@/assets/dest-mexico-guadalupe.webp";
+import mexicoTulum from "@/assets/dest-mexico-tulum.webp";
+import mexicoChichen from "@/assets/dest-mexico-chichen.webp";
+import mexicoTulumMar from "@/assets/dest-mexico-tulum-mar.webp";
+import mexicoLetrero from "@/assets/dest-mexico-letrero.webp";
 import lajas from "@/assets/dest-lajas.webp";
 import lajasMirador from "@/assets/dest-lajas-mirador.webp";
 import lajasNoche from "@/assets/dest-lajas-noche.webp";
@@ -620,6 +627,40 @@ export const tours: Tour[] = [
     salida: "12 al 17 de noviembre, 2026",
     salidaISO: "2026-11-12",
     imagen: mexico,
+    galeria: [
+      {
+        src: mexico,
+        alt: "Playa de Cancún con palapas, arena blanca y mar turquesa",
+      },
+      {
+        src: mexicoZocalo,
+        alt: "Zócalo de la Ciudad de México con la bandera, la Catedral y el Palacio Nacional",
+      },
+      {
+        src: mexicoBasilica,
+        alt: "Basílica de Santa María de Guadalupe al atardecer en la Ciudad de México",
+      },
+      {
+        src: mexicoGuadalupe,
+        alt: "Interior de la Basílica de Guadalupe con la tilma y la bandera de México",
+      },
+      {
+        src: mexicoChichen,
+        alt: "Pirámide de Kukulcán en Chichén Itzá, Yucatán",
+      },
+      {
+        src: mexicoTulum,
+        alt: "Templo maya en las ruinas de Tulum, Quintana Roo",
+      },
+      {
+        src: mexicoTulumMar,
+        alt: "Ruinas de Tulum frente al mar Caribe mexicano",
+      },
+      {
+        src: mexicoLetrero,
+        alt: "Letrero de Cancún frente a la playa y el mar Caribe",
+      },
+    ],
     resumen: "Pirámides milenarias, cenotes y el azul del Caribe mexicano.",
     descripcion:
       "De la capital azteca a la Riviera Maya: historia, gastronomía y playas de arena blanca en un mismo viaje.",

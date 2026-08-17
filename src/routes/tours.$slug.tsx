@@ -76,10 +76,7 @@ export const Route = createFileRoute("/tours/$slug")({
 function TourPage() {
   const { tour } = Route.useLoaderData() as { tour: Tour };
   const relacionados = tours.filter((t) => t.slug !== tour.slug).slice(0, 3);
-  const galeria = tour.galeria ?? [
-    { src: tour.imagen, alt: `Paisaje de ${tour.nombre}` },
-    ...relacionados.map((t) => ({ src: t.imagen, alt: `Paisaje de ${t.nombre}` })),
-  ];
+  const galeria = tour.galeria ?? [{ src: tour.imagen, alt: `Paisaje de ${tour.nombre}` }];
 
   return (
     <>

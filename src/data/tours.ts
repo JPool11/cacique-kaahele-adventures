@@ -109,6 +109,12 @@ export const tours: Tour[] = [
     salida: "Marzo, 2026",
     salidaISO: "2026-03-01",
     imagen: murillo,
+    galeria: [
+      {
+        src: murillo,
+        alt: "Ruta en moto por el páramo de Murillo, Tolima",
+      },
+    ],
     resumen: "Moteros, páramo y carretera: la ruta más adrenalínica del Tolima.",
     descripcion:
       "Un recorrido en moto por las alturas de Murillo, entre frailejones, neblina y curvas infinitas con vista al Nevado del Ruiz.",
@@ -318,6 +324,12 @@ export const tours: Tour[] = [
     salida: "13 al 15 de junio, 2026",
     salidaISO: "2026-06-13",
     imagen: amazonas,
+    galeria: [
+      {
+        src: amazonas,
+        alt: "Barco sobre el río Amazonas en Leticia, Colombia",
+      },
+    ],
     resumen: "Selva, río y comunidades: la aventura más intensa del país.",
     descripcion:
       "Navegación por el río Amazonas, caminatas nocturnas en la selva, avistamiento de delfines rosados y convivencia con comunidades indígenas.",
@@ -476,6 +488,12 @@ export const tours: Tour[] = [
     salida: "2 al 17 de octubre, 2026",
     salidaISO: "2026-10-02",
     imagen: oculto,
+    galeria: [
+      {
+        src: oculto,
+        alt: "Destino Oculto, viaje sorpresa de Cacique Kaahele",
+      },
+    ],
     resumen: "No sabes a dónde vas. Solo sabes que vas a volver diferente.",
     descripcion:
       "Nuestro viaje insignia: revelamos el destino 48 horas antes de la salida. Tú pones la maleta y las ganas, nosotros ponemos la sorpresa.",

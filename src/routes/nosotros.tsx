@@ -159,6 +159,7 @@ function Nosotros() {
                   <figcaption className="p-6">
                     <p className="text-xl font-extrabold">{m.n}</p>
                     <p className="text-muted-foreground">{m.c}</p>
+                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{m.d}</p>
                   </figcaption>
                 </figure>
               </Reveal>

@@ -34,20 +34,20 @@ const valores = [
 const equipo = [
   {
     n: "Melqui Pajoy Pizo",
-    c: "Director General, Diseñador de Rutas y Guía de aventuras (Sede El Pital)",
-    d: "Fundador de esta aventura y el encargado de conectar los hilos detrás de cada viaje. Desde nuestra sede principal en El Pital, Huila, diseño la logística, negocio los mejores vuelos y hoteles, y coordino cada detalle para que tu experiencia sea perfecta. Mi mayor pasión es el turismo, por eso sigo saliendo al terreno como guía para asegurarme personalmente de que disfrutes cada kilómetro del camino.",
+    c: "Gerente General y Fundador",
+    d: "Fundador de Cacique Kaahele y responsable de liderar la planeación y operación de nuestras experiencias turísticas. Desde El Pital, Huila, diseña rutas, selecciona destinos y coordina cada detalle de los viajes, con el propósito de brindar experiencias organizadas, seguras y memorables.",
     i: pic("caribe-colombiano"),
   },
   {
     n: "Alis Bonilla Vargas",
-    c: "Asesora de Viajes y Guía de Aventuras (Sede Cartagena)",
-    d: "Apasionada por el servicio y experta en hacer realidad los viajes de tus sueños. En nuestra sede de Cartagena te ayudo a planificar y elegir tu próxima aventura, y en el terreno, me convierto en tu guía para asegurarme de que vivas cada destino con la máxima seguridad, alegría y detalles locales que nadie más te contará.",
+    c: "Asesora Comercial y de Viajes | Sede Cartagena",
+    d: "Brinda asesoría personalizada a nuestros viajeros desde la sede de Cartagena, acompañándolos en la elección y planificación de cada experiencia. Su vocación de servicio y conocimiento del sector turístico contribuyen a ofrecer una atención cercana, profesional y confiable, representando los valores y el compromiso de Cacique Kaahele.",
     i: pic("eje-cafetero"),
   },
   {
     n: "Jhan Pool Agudelo Triana",
-    c: "Líder de Tecnología & Guía de Aventuras (Sede El Pital)",
-    d: "¿Quién dice que los programadores no salen al sol? En la agencia construyo el código de nuestra web y lidero toda el área tecnológica. Cuando no estoy programando o editando los videos de nuestras redes, cambio el teclado por la mochila para ser tu guía en el terreno, capturando cada gran momento de la ruta.",
+    c: "Líder de Tecnología",
+    d: "Lidera la presencia digital de Cacique Kaahele, integrando tecnología, diseño web y producción audiovisual. Su trabajo convierte destinos y experiencias en contenidos atractivos que fortalecen nuestra imagen, conectan con los viajeros e inspiran nuevas aventuras.",
     i: pic("parque-tairona"),
   },
 ];
